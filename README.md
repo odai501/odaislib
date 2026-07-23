@@ -516,11 +516,11 @@ urllib3 >= 2.2.1
 
 ## 👨‍💻 المطور
 
-**Odai @K33Ka**
+**Odai Obeidat**
 
-- Telegram: [@K33K1](https://t.me/K33K1)
-- GitHub: [@odai501](https://github.com/odai501)
-- PyPI: [odaislib](https://pypi.org/project/odaislib/)
+- Telegram : [@K33K1](https://t.me/K33K1)
+- GitHub : [@odai501](https://github.com/odai501)
+- PyPI : [odaislib](https://pypi.org/project/odaislib/)
 
 ---
 
