@@ -1,3 +1,8 @@
+بكل سرور، هذا هو ملف `README.md` نفسه مع تعديل اسم المستخدم إلى **K33K1** في جميع الأماكن:
+
+---
+
+```markdown
 # 📦 odaislib – مكتبة بايثون الاحترافية متعددة المهام
 
 ![PyPI version](https://img.shields.io/pypi/v/odaislib.svg)
@@ -516,7 +521,7 @@ urllib3 >= 2.2.1
 
 ## 👨‍💻 المطور
 
-**Odai @K33Ka**
+**Odai @K33K1**
 
 - Telegram: [@K33K1](https://t.me/K33K1)
 - GitHub: [@odai501](https://github.com/odai501)
@@ -556,8 +561,9 @@ urllib3 >= 2.2.1
 
 ---
 
-**تم التطوير بكل ❤️ بواسطة Odai @K33Ka**
+**تم التطوير بكل ❤️ بواسطة Odai @K33K1**
 
 ---
 
 *استخدم التكنولوجيا بحكمة ومسؤولية. 🔒*
+```
