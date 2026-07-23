@@ -9,7 +9,7 @@
 > ⚠️ **تنبيه**: هذه المكتبة للأغراض التعليمية والبحثية فقط. استخدامها في اختراق الحسابات أو انتهاك الخصوصية غير قانوني وغير أخلاقي.
 
 ## التثبيت
-`ash
+`Bash
 pip install odaislib
 مثال سريع
 python
@@ -17,5 +17,5 @@ from odaislib import facebook
 result = facebook.basic("email@example.com", "password")
 print(result)
 المطور
-Odai @K33Ka - GitHub
+Odai< Telegram : @K33K1
 
