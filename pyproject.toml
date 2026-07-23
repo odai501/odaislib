@@ -1,0 +1,32 @@
+﻿[tool.poetry]
+name = "odaislib"
+version = "1.11.16"
+description = "A Python library for API extraction and automation helpers"
+authors = ["Odai @K33Ka"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/odai501/odaislib"
+homepage = "https://github.com/odai501/odaislib"
+documentation = "https://odai501.github.io/odaislib/"
+packages = [{ include = "odaislib", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+httpx = "^0.27.0"
+user-agent = "^0.1.10"
+beautifulsoup4 = "^4.12.3"
+pycryptodome = "^3.20.0"
+urllib3 = "^2.2.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+mkdocs = "^1.6.0"
+mkdocs-material = "^9.5.0"
+mkdocstrings-python = "^1.10.0"
+twine = "^5.0.0"
+build = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
