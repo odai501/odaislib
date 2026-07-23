@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "odaislib"
-version = "1.11.16"
+version = "1.12.1"
 description = "A comprehensive Python library for API extraction and automation"
 authors = ["Odai @K33K1"]
 license = "MIT"
