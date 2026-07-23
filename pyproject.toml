@@ -2,7 +2,7 @@
 name = "odaislib"
 version = "1.11.16"
 description = "A Python library for API extraction and automation helpers"
-authors = ["Odai @K33Ka"]
+authors = ["Odai @K33K1"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/odai501/odaislib"
